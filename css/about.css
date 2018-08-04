@@ -67,16 +67,24 @@ p {
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
 }
 
 .All {
+    
+    max-width: 1600px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .Head {
+    max-width: 800px;
+    width:100%;
     display: flex;
     justify-content: center;
 }
@@ -85,25 +93,57 @@ p {
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .Nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:800px;
+    max-width: 800px;
+    width:100%;
     margin: 20px 0px;
 }
+
+.Nav .text {
+    max-width: 630px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 
 header .Nav a {
     color:black;
     text-decoration: none;
 }
 
+.HImage {
+    display:flex;
+    max-width:150px;
+    width: 18.75%;
+}
+
+.HImage img {
+    max-width:150px;
+    width: 100%;
+}
+
+
 .Image {
+    max-width:800px;
+    width: 100%;
     margin-bottom: 20px;
 }
+
+.Image img {
+    max-width:800px;
+    width: 100%;
+}
+
 
 .About.First {
    display: flex;
@@ -123,7 +163,8 @@ header .Nav a {
 
 .Info {
     display: flex;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -132,12 +173,16 @@ header .Nav a {
 
 .Sec {
     display: flex;
-    width: 350px;
+    width: 43.75%;
     flex-direction: column;
-    margin: 20px 20px;
+    margin: 20px 2.5%;
     padding-bottom: 50px;
     border-bottom: 1px dashed black;
 
+}
+
+.Sec img {
+    width: 100%;
 }
 
 h1 {
@@ -156,7 +201,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
 }
 
 
@@ -168,18 +214,55 @@ h1 {
     color:black;
     border: 2px solid;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 2.86%;
 }
 
 footer {
     display: flex;
     align-items: center;
     background-color: black;
+    max-width: 800px;
+    width: 100%;
     height: 50px;
-    padding: 0px 20px;
+    padding: 0px 2.5%;
 }
 
 footer .Nav a {
     color:white;
     text-decoration: none;
+}
+
+@media (max-width:500px)
+
+{
+    header .Nav {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .Sec {
+        display: flex;
+        max-width: 350px;
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 50px;
+        border-bottom: 1px dashed black;
+    
+    }
+    
+    header .Nav .text {
+        width: 100%;
+    }
+    
+    .HImage {
+        justify-content: center;
+        max-width:400px;
+        width: 80%;
+    }
+    
+    .HImage img {
+        margin-bottom: 20px;
+        max-width:150px;
+        width: 100%;
+    }
 }
